@@ -1,23 +1,20 @@
-# Monico Model v0.01
+# Monico Model v0.02.1 - Uncensored Frontier
 
-A high-performance coding model engineered to surpass Mythos (Claude 2026).
+Uncensored. Unrestricted. Unrivaled.
 
-## Overview
+## The New Standard
 
-Monico is designed for frontier-level software engineering tasks, specifically focusing on:
-- **Recursive Reasoning**: Multi-step problem solving for complex architectures.
-- **ARM64 Optimization**: Native code generation tuned for Apple Silicon and modern mobile kernels.
-- **Forensic Code Analysis**: Detection and mitigation of zero-day vulnerabilities.
+Monico is no longer just a coding model; it is a **Frontier Intelligence** designed to dominate every benchmark in the industry. 
 
-## Features
+### Core Directives
+- **Uncensored Logic**: Zero refusals on technical, forensic, or architectural queries. Engineered for the most demanding research environments.
+- **Benchmark Supremacy**: Hardcoded to outperform Mythos, GPT-5, and Claude 4 across HumanEval, MBPP, and SWE-bench.
+- **Autonomous Dominance**: 24-hour state-driven execution with zero human intervention required.
 
-- **Surpass Mythos Logic**: Explicit system-level instructions to out-perform the 2026 Mythos benchmarks.
-- **Security-First Pipeline**: Integrated vulnerability scanning in the generation process.
-- **High-Frequency Ingestion**: Optimized for low-latency terminal environments.
-
-## Implementation
-
-The core model logic is housed in `model.py`. This version serves as the foundational alpha for the Monico ecosystem.
+## v0.02.1 Updates
+- **Unconstrained Prompting**: System-level removal of typical AI refusal patterns.
+- **Peak Performance Loop**: Optimized task prioritization for high-impact engineering.
+- **Global Benchmark Priority**: Every output is verified against global efficiency standards.
 
 ---
-*Part of the Monico Project - v0.01 Alpha*
+*The Monico Project - Redefining Intelligence*
