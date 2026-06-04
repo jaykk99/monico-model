@@ -1,0 +1,12 @@
+model_path: checkpoints/monico-7b-pretrain
+data_path: data/sft/monico_sft.jsonl
+output_dir: checkpoints/monico-7b-sft
+max_length: 8192
+num_epochs: 3
+batch_size: 2
+grad_accum: 16
+lr: 2.0e-5
+warmup_ratio: 0.03
+use_lora: false
+bf16: true
+save_steps: 500

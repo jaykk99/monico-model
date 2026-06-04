@@ -14,7 +14,7 @@ tags:
   - devops
   - from-scratch
   - causal-lm
-base_model: null
+
 datasets:
   - Jkkkkkkkkksks/monico-datasets
   - bigcode/the-stack-v2-dedup
