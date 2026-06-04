@@ -1,0 +1,33 @@
+# Monico 7B Pre-training Config
+# Target hardware: 8x A100 80GB
+# Estimated time: ~4 weeks at $0.80/GPU/hr = ~$5,000
+
+model_size: "7b"
+vocab_size: 128000
+
+# Data
+data_dir: "data/tokenized"
+seq_len: 4096
+num_workers: 4
+
+# Training
+batch_size: 2           # Per GPU micro-batch
+gradient_accumulation: 16  # Effective batch = 2*16*8GPU = 256 sequences = 1M tokens
+max_steps: 600000       # ~600B tokens
+warmup_steps: 2000
+lr: 3.0e-4
+min_lr: 3.0e-5
+weight_decay: 0.1
+grad_clip: 1.0
+beta1: 0.9
+beta2: 0.95
+
+# Checkpointing
+save_dir: "checkpoints/7b"
+save_every: 2000
+eval_every: 500
+log_every: 10
+
+# Precision
+dtype: "bfloat16"
+compile_model: true

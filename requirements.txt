@@ -1,43 +1,17 @@
-# Monico Model — Training & Inference Dependencies
-
-# Core ML
 torch>=2.3.0
-torchvision>=0.18.0
 transformers>=4.41.0
-accelerate>=0.30.0
-datasets>=2.19.0
 tokenizers>=0.19.0
-sentencepiece>=0.2.0
-
-# Training
+datasets>=2.19.0
 deepspeed>=0.14.0
-flash-attn>=2.5.8  # flash attention
-wandb>=0.17.0
+accelerate>=0.30.0
 einops>=0.8.0
-bitsandbytes>=0.43.0  # quantization
-
-# Data Processing
+flash-attn>=2.5.9
+datasketch>=1.6.5
+pyyaml>=6.0.1
 numpy>=1.26.0
-pandas>=2.2.0
-pyarrow>=16.0.0
-zstandard>=0.22.0
-minhash>=0.1.0
-langdetect>=1.0.9
-
-# Evaluation
-evaluate>=0.4.2
-scikit-learn>=1.4.0
-rouge-score>=0.1.2
-
-# Utilities
-rich>=13.7.0
-typer>=0.12.0
-pydantic>=2.7.0
-httpx>=0.27.0
 tqdm>=4.66.0
-psutil>=5.9.0
-
-# Infrastructure
+wandb>=0.17.0
+sentencepiece>=0.2.0
 huggingface_hub>=0.23.0
-boto3>=1.34.0  # S3 for dataset storage
-ray>=2.20.0    # distributed data processing
+safetensors>=0.4.3
+scipy>=1.13.0
