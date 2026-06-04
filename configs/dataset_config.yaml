@@ -1,0 +1,139 @@
+# Monico Training Dataset Configuration
+# All datasets are curated, cleaned, and de-duplicated
+
+datasets:
+
+  # === CODE CORPORA ===
+  code:
+    - name: "The Stack v2"
+      source: "bigcode/the-stack-v2"
+      weight: 0.25
+      languages: ["python", "javascript", "typescript", "rust", "go", "c", "cpp", "java", "solidity", "bash", "powershell", "sql"]
+      filters:
+        min_stars: 5
+        max_lines: 10000
+        remove_auto_generated: true
+
+    - name: "GitHub Code Filtered"
+      source: "codeparrot/github-code-clean"
+      weight: 0.10
+      filters:
+        license: ["mit", "apache-2.0", "gpl-3.0", "bsd-3-clause"]
+
+    - name: "DeepMind Code Contests"
+      source: "deepmind/code_contests"
+      weight: 0.05
+
+  # === CYBERSECURITY ===
+  security:
+    - name: "CVE Database + Writeups"
+      source: "custom/cve-corpus"
+      weight: 0.08
+      includes: ["CVE descriptions", "PoC code", "mitigation strategies", "security advisories"]
+
+    - name: "CTF Writeups"
+      source: "custom/ctf-writeups-corpus"
+      weight: 0.05
+      sources: ["github ctf writeups", "ctftime.org", "hackthebox writeups"]
+
+    - name: "Security Research Papers"
+      source: "custom/security-papers"
+      weight: 0.03
+      sources: ["arxiv cs.CR", "usenix security", "s&p", "ccs", "ndss"]
+
+    - name: "Offensive Security Tools (Documented)"
+      source: "custom/offsec-tools-docs"
+      weight: 0.04
+      includes: ["metasploit docs", "nmap", "burpsuite", "impacket", "bloodhound"]
+
+  # === CRYPTO & WEB3 ===
+  crypto:
+    - name: "Ethereum Codebase + EIPs"
+      source: "custom/ethereum-corpus"
+      weight: 0.04
+      includes: ["go-ethereum", "EIPs", "Solidity docs", "Vyper", "smart contracts"]
+
+    - name: "DeFi Protocol Code"
+      source: "custom/defi-protocols"
+      weight: 0.03
+      includes: ["uniswap", "aave", "compound", "curve", "maker"]
+
+    - name: "Crypto Whitepapers"
+      source: "custom/crypto-whitepapers"
+      weight: 0.02
+      includes: ["bitcoin", "ethereum", "solana", "cosmos", "polkadot", "avalanche"]
+
+    - name: "On-chain Analysis"
+      source: "custom/onchain-analysis-corpus"
+      weight: 0.02
+
+  # === DEVOPS & INFRA ===
+  devops:
+    - name: "Infrastructure as Code"
+      source: "custom/iac-corpus"
+      weight: 0.05
+      includes: ["terraform", "ansible", "kubernetes", "docker", "helm"]
+
+    - name: "CI/CD Configs"
+      source: "custom/cicd-corpus"
+      weight: 0.03
+      includes: ["github actions", "gitlab ci", "jenkins", "circleci"]
+
+    - name: "Cloud Provider Docs"
+      source: "custom/cloud-docs"
+      weight: 0.03
+      providers: ["aws", "gcp", "azure", "cloudflare"]
+
+  # === GENERAL INTELLIGENCE ===
+  general:
+    - name: "RedPajama v2 Filtered"
+      source: "togethercomputer/RedPajama-Data-V2"
+      weight: 0.10
+      quality_filter: "ccnet_perplexity < 200"
+
+    - name: "OpenWebText2"
+      source: "openwebtext2"
+      weight: 0.05
+
+    - name: "ArXiv (CS + Math + Physics)"
+      source: "custom/arxiv-filtered"
+      weight: 0.04
+
+    - name: "Books (Copyright-clear)"
+      source: "custom/books-corpus"
+      weight: 0.03
+
+  # === SYNTHETIC DATA ===
+  synthetic:
+    - name: "Chain-of-Thought Reasoning Traces"
+      source: "custom/cot-synthetic"
+      weight: 0.04
+      generator: "gpt-4o + claude-opus verified"
+
+    - name: "Code with Explanations"
+      source: "custom/code-explanations-synthetic"
+      weight: 0.03
+
+    - name: "Security Scenarios"
+      source: "custom/security-scenarios-synthetic"
+      weight: 0.02
+
+# Total token budget: ~2T tokens
+# Domain weighting optimized for Monico's target use cases
+
+preprocessing:
+  deduplication:
+    method: "minhash-lsh"
+    threshold: 0.9
+    ngram_size: 5
+
+  quality_filters:
+    - min_token_length: 50
+    - max_token_length: 8192
+    - remove_boilerplate: true
+    - perplexity_filter: true
+    - language_detection: true
+
+  tokenizer: "jaykk99/monico-tokenizer"
+  output_format: "binary_packed"
+  output_dir: "data/processed"

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+.env
+venv/
+.venv/
+
+# Model artifacts (too large for git — use HuggingFace Hub)
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+*.gguf
+data/processed/
+data/raw/
+
+# Wandb
+wandb/
+.wandb/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
