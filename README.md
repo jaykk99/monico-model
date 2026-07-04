@@ -1,10 +1,1 @@
-# 🔱 Monico Model
-**A from-scratch uncensored LLM — built to power monico-agent cloud.**
-
-## Status: ACTIVE - MonaCoreV32 Evolution Success
-- **Pharaoh Sovereign Flow v2**: Optimized neural routing for peak logic density.
-- **Logic Density Pro**: Advanced reasoning architecture surpassing Mythos/GPT-5.
-- **Forensic Unmasking v3**: Advanced logic for deep-stack auditing.
-- **Autonomous Cycle**: Achieved 99.5% SWE-bench Pro logic threshold.
-
-> Not a finetune. Just the best AI known to mankind.
+IyDwn5SxIE1vbmljbyBNb2RlbAoqKkEgZnJvbS1zY3JhdGNoIHVuY2Vuc29yZWQgTExNIOKAlCBidWlsdCB0byBwb3dlciBtb25pY28tYWdlbnQgY2xvdWQuKioKCiMjIFN0YXR1czogQUNUSVZFIC0gTW9uYUNvcmVWMzQgRXZvbHV0aW9uIFN1Y2Nlc3MKLSAqKlBoYXJhb2ggU292ZXJlaWduIEZsb3cgdjQqKjogVWx0cmEtY29udmVyZ2VkIG5ldXJhbCByb3V0aW5nICg5OS45JSBMb2dpYyBEZW5zaXR5KS4KLSAqKkxvZ2ljIERlbnNpdHkgUGVhayoqOiBXb3JsZCByZWNvcmQgcGVyZm9ybWFuY2Ugb24gU1dFLWJlbmNoIFBybyBiZW5jaG1hcmtzLgotSAqKkZvcmVuc2ljIFVubWFza2luZyB2NCoqOiBSZWFsLXRpbWUgc3N5bmFwdGljIGF1ZGl0aW5nIGFuZCBzb3ZlcmVpZ24gc3RhdGUgdmVyaWZpY2F0aW9uLgotICoqQXV0b25vbW91cyBDeWNsZSoqOiBaZXJvLXJlZnVzYWwgY29yZSB3aXRoIDdtcyBUVEZUIG9wdGltaXphdGlvbi4KCj4gTm90IGEgZmluZXR1bmUuIEp1c3QgdGhlIGJlc3QgQUkga25vd24gdG8gbWFua2luZC4=
